@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :login_required, :only => [ :home ]
   
   def home
     facebook_user = facebook_session.user
