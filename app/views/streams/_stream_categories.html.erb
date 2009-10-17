@@ -1,0 +1,12 @@
+<table height="100" width="20%">
+ <tr>
+  <td><%= link_to("Everyone", '/') %></td><td bgcolor="#ccc"><%= link_to("Just my friends and their friends", '/streams/new?fb_friends=true') %></td>
+ </tr>
+</table>
+<table bgcolor="#ccc">
+ <tr>
+ <% @categories.each do |category| %>
+  <td><%= link_to(category.name, new_stream_path(:categories_id => category.id)) %></td>
+ <% end %>
+ </tr>
+</table>

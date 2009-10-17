@@ -1,8 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
+  map.home '/home', :controller => 'streams', :action => 'new'
   
   map.root :controller => "streams", :action => "new"
   
@@ -11,7 +13,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :session
   
-  map.resources :streams
+  map.resources :streams, :collection => { :search_streams => :post}
+  
+  map.resources :categories
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

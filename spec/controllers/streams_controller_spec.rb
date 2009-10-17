@@ -22,14 +22,6 @@ describe StreamsController do
     end
   end
 
-  describe "GET new" do
-    it "assigns a new stream as @stream" do
-      Stream.stub!(:new).and_return(mock_stream)
-      get :new
-      assigns[:stream].should equal(mock_stream)
-    end
-  end
-
   describe "GET edit" do
     it "assigns the requested stream as @stream" do
       Stream.stub!(:find).with("37").and_return(mock_stream)
@@ -45,12 +37,6 @@ describe StreamsController do
         Stream.stub!(:new).with({'these' => 'params'}).and_return(mock_stream(:save => true))
         post :create, :stream => {:these => 'params'}
         assigns[:stream].should equal(mock_stream)
-      end
-
-      it "redirects to the created stream" do
-        Stream.stub!(:new).and_return(mock_stream(:save => true))
-        post :create, :stream => {}
-        response.should redirect_to(stream_url(mock_stream))
       end
     end
 

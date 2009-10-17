@@ -6,20 +6,21 @@
 </style>
 <table width="20%" border=0>
   <tr>
-    <th align="left" width="20px">Questions</th>
+    <th align="left" width="20px">Listings</th>
+    <th></th>
     <th></th>
   </tr>
 <% @streams.each do |stream| %>
   <tr>
-    <td><fb:profile-pic uid="<%= current_user.fb_user_id%>" facebook-logo="true" size="thumb" ></fb:profile-pic></td>
+    <td><fb:profile-pic uid="<%= stream.user.fb_user_id.to_i %>" facebook-logo="true" size="thumb" ></fb:profile-pic></td>
     <td><%=h stream.name %></td>
-    <% if false %>
-      <td><%= link_to 'Show', stream %></td>
-      <td><%= link_to 'Edit', edit_stream_path(stream) %></td>
-      <td><%= link_to 'Destroy', stream, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= submit_tag("Pimp it") %></td>
+    <% if stream.user == current_user %>
+      <td><%= link_to image_tag("/images/icons/delete.png", :style => "text-decoration:none;border:0;"), stream, :confirm => 'Are you sure?', :method => :delete %></td>
     <% end %>
   </tr>
   <tr>
+   <td><div id="dividedLinks"></div></td>
    <td><div id="dividedLinks"></div></td>
    <td><div id="dividedLinks"></div></td>
   </tr>

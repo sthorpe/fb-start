@@ -1,5 +1,5 @@
 class StreamsController < ApplicationController
-  
+  before_filter :login_required, :only => [ :new ]
   
   
   # GET /streams
@@ -11,6 +11,10 @@ class StreamsController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @streams }
     end
+  end
+  
+  def search_streams
+    @streams = Stream.search params 
   end
 
   # GET /streams/1
@@ -28,11 +32,27 @@ class StreamsController < ApplicationController
   # GET /streams/new.xml
   def new
     @stream = Stream.new
-    @streams = Stream.all
+    @categories = Categories.find(:all, :limit => 6)
     
-    facebook_user = facebook_session.user
-    @tags = facebook_user.interests
-    @friends = facebook_user.friends.to_a[0..3]
+    if facebook_session
+      facebook_user = facebook_session.user
+      @tags = facebook_user.interests
+      @friends = facebook_user.friends.to_a[0..3]
+    end
+    
+    if params[:categories_id] 
+      if params[:categories_id] == "1"
+        @streams = Stream.all
+      else
+        @streams = Stream.find(:all, :conditions=>["categories_id IN (#{params[:categories_id]})" ])
+      end
+    else 
+      @streams = Stream.all
+    end
+    
+    if params[:fb_friends] == "true" && facebook_session
+      @streams = Stream.find_friends_streams(facebook_session)
+    end
     
     respond_to do |format|
       format.html # new.html.erb
@@ -49,9 +69,12 @@ class StreamsController < ApplicationController
   # POST /streams.xml
   def create
     @stream = Stream.new(params[:stream])
+    @categories = Categories.find(:all, :limit => 6)
+    @streams = Stream.all
 
     respond_to do |format|
       if @stream.save
+        current_user.new_stream(@stream)
         flash[:notice] = 'Stream was successfully created.'
         format.html { redirect_to new_stream_path }
         format.xml  { render :xml => @stream, :status => :created, :location => @stream }
@@ -86,7 +109,7 @@ class StreamsController < ApplicationController
     @stream.destroy
 
     respond_to do |format|
-      format.html { redirect_to(streams_url) }
+      format.html { redirect_to(new_stream_url) }
       format.xml  { head :ok }
     end
   end
