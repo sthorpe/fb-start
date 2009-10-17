@@ -1,0 +1,17 @@
+<br/>
+<fb:profile-pic uid="<%= current_user.fb_user_id%>" facebook-logo="true" size="thumb" ></fb:profile-pic>
+<br/>
+  <% form_for(@stream) do |f| %>
+    <%= f.error_messages %>
+    <p>
+      <u>Question:</u>
+      <br/>    
+      <%= f.text_area :name, :rows => 2, :cols => 30 %>
+    </p>
+    <p>
+      <%= f.submit 'Create' %>
+    </p>
+  <% end %>
+<br/>
+<%= render :partial => "stream_topics" %>
+<%= render :partial => "stream_filter" %>

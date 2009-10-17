@@ -1,11 +1,6 @@
 class UsersController < ApplicationController
   before_filter :login_required, :only => [ :home ]
   
-  def home
-    facebook_user = facebook_session.user
-    @tags = facebook_user.interests
-    @friends = facebook_user.friends.to_a[0..3]
-  end
 
   # render new.rhtml
   def new

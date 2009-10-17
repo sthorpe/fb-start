@@ -18,7 +18,7 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: connect_tutorial_development
+  database: fb_start_development
   pool: 5
   username: root
   password:
@@ -31,7 +31,7 @@ test:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: connect_tutorial_test
+  database: fb_start_test
   pool: 5
   username: root
   password:
@@ -41,7 +41,7 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: connect_tutorial_production
+  database: fb_start_production
   pool: 5
   username: root
   password: 
