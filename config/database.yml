@@ -40,7 +40,6 @@ test:
 production:
   adapter: mysql
   encoding: utf8
-  reconnect: false
   database: fb_start_production
   pool: 5
   username: root
