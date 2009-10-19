@@ -12408,3 +12408,19 @@ Rendered streams/_stream_categories (1.2ms)
 Rendered streams/_stream_filter (11.0ms)
 Rendered shared/_nav (0.7ms)
 Completed in 2229ms (View: 24, DB: 11) | 200 OK [http://localhost/streams/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-10-19 12:23:07) [GET]
+Redirected to http://localhost:3000/login
+Completed in 91ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-10-19 12:23:08) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_nav (11.7ms)
+Completed in 55ms (View: 52, DB: 0) | 200 OK [http://localhost/login]
