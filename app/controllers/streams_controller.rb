@@ -76,7 +76,8 @@ class StreamsController < ApplicationController
       if @stream.save
         current_user.new_stream(@stream)
         begin
-          FacebookerPublisher.deliver_posted_action(facebook_session.user, @stream)
+          #FacebookerPublisher.deliver_posted_action(facebook_session.user, @stream)
+          facebook_session.user.publish_to(facebook_session.user, :message => @stream.name.to_s)
         rescue
         end
         flash[:notice] = 'Stream was successfully created.'
