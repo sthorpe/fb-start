@@ -75,6 +75,8 @@ class StreamsController < ApplicationController
     respond_to do |format|
       if @stream.save
         current_user.new_stream(@stream)
+        FacebookerPublisher.deliver_posted_action(facebook_session.user, @stream)
+        
         flash[:notice] = 'Stream was successfully created.'
         format.html { redirect_to new_stream_path }
         format.xml  { render :xml => @stream, :status => :created, :location => @stream }

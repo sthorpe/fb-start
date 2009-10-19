@@ -9,10 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091017193944) do
+ActiveRecord::Schema.define(:version => 20091019013137) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "facebook_templates", :force => true do |t|
+    t.string   "bundle_id"
+    t.string   "template_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

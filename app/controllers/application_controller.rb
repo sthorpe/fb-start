@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     
   before_filter :set_facebook_session
   helper_method :facebook_session
-    
+   
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 end
