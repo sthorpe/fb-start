@@ -16,6 +16,14 @@ class StreamsController < ApplicationController
   def search_streams
     @streams = Stream.search params 
   end
+  
+  def send_email
+    @stream = Stream.find(params[:id])
+    user_ids = [params[:uid].to_i]
+    facebook_session.user.notifications_sendEmail(user_ids,"Check this out!", @stream.name)
+    flash[:notice] = "Message sent."
+    redirect_to :back
+  end
 
   # GET /streams/1
   # GET /streams/1.xml

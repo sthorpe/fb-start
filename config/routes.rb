@@ -13,7 +13,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :session
   
-  map.resources :streams, :collection => { :search_streams => :post}
+  map.resources :streams, :collection => { :search_streams => :post,
+                                           :send_email => :get}
   
   map.resources :categories
   

@@ -387,6 +387,12 @@ module Facebooker
       end
     end
     
+    def notifications_sendEmail(recipients, subject, text)
+      session.post('facebook.notifications.sendEmail',{:recipients=>recipients.to_json,:subject=>subject.to_s,:text=>text.to_s}, false) do |ret|
+        ret
+      end
+    end
+    
     ##
     # Checks to see if the user has enabled the given extended permission
     def has_permission?(ext_perm) # ext_perm = email, offline_access, status_update, photo_upload, create_listing, create_event, rsvp_event, sms
