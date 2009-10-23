@@ -40,27 +40,8 @@ class StreamsController < ApplicationController
   # GET /streams/new.xml
   def new
     @stream = Stream.new
-    @categories = Categories.find(:all, :limit => 6)
-    
-    if facebook_session
-      facebook_user = facebook_session.user
-      @tags = facebook_user.interests
-      @friends = facebook_user.friends.to_a[0..3]
-    end
-    
-    if params[:categories_id] 
-      if params[:categories_id] == "1"
-        @streams = Stream.all
-      else
-        @streams = Stream.find(:all, :conditions=>["categories_id IN (#{params[:categories_id]})" ])
-      end
-    else 
-      @streams = Stream.all
-    end
-    
-    if params[:fb_friends] == "true" && facebook_session
-      @streams = Stream.find_friends_streams(facebook_session)
-    end
+    @categories = Categories.find(:all, :limit => 6)    
+    @streams = @stream.sort_by_categories_and_friends(params, facebook_session)
     
     respond_to do |format|
       format.html # new.html.erb

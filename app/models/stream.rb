@@ -11,6 +11,21 @@ class Stream < ActiveRecord::Base
     return user
   end
   
+  def sort_by_categories(params, facebook_session)
+    categories = params[:categories_id]
+    if categories
+      if categories == "1"
+        @streams = Stream.all
+      else
+        @streams = Stream.find(:all, :conditions=>["categories_id IN (#{categories})" ])
+      end
+    elsif params[:fb_friends] == "true" && facebook_session
+      @streams = Stream.find_friends_streams(facebook_session)
+    else 
+      return @streams = Stream.all
+    end
+  end
+  
   def self.search(params)
     conditions = ""
     streams = []

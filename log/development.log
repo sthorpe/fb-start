@@ -14726,3 +14726,492 @@ Rendered streams/_stream_categories (1.1ms)
 Rendered streams/_stream_filter (8.0ms)
 Rendered shared/_nav (0.7ms)
 Completed in 554ms (View: 16, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (109.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:24:07) [GET]
+  [4;36;1mUser Columns (81.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (37.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mStream Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (48.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+
+NameError (uninitialized constant StreamsController::Steam):
+  app/controllers/streams_controller.rb:44:in `new'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering /Users/sthorpe/Programming/Rails/fb-start/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:24:21) [GET]
+  [4;36;1mUser Columns (18.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (15.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mStream Columns (23.5ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (23.9ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mSQL (46.5ms)[0m   [0;1mSHOW TABLES[0m
+
+NoMethodError (undefined method `sort_by_categories' for #<Class:0x231fbd0>):
+  app/controllers/streams_controller.rb:44:in `new'
+
+Rendered rescues/_trace (41.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering /Users/sthorpe/Programming/Rails/fb-start/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:24:37) [GET]
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mStream Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mCategories Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 6[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+
+NoMethodError (undefined method `sort_by_categories' for #<Class:0x217bfe0>):
+  app/controllers/streams_controller.rb:44:in `new'
+
+Rendered rescues/_trace (125.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering /Users/sthorpe/Programming/Rails/fb-start/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:24:55) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mStream Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (0.4ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (26.8ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;35;1mCategories Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered streams/_stream_categories (10.2ms)
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #13 of app/views/streams/_stream_filter.html.erb:
+10:     <th></th>
+11:     <th></th>
+12:   </tr>
+13: <% @streams.each do |stream| %>
+14:   <tr>
+15:     <td><fb:profile-pic uid="<%= stream.user.fb_user_id.to_i %>" facebook-logo="true" size="thumb" ></fb:profile-pic></td>
+16:     <td><%=h stream.name %></td>
+
+    app/views/streams/_stream_filter.html.erb:13
+    app/views/streams/new.html.erb:25
+    app/controllers/streams_controller.rb:51:in `new'
+
+Rendered rescues/_trace (61.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering /Users/sthorpe/Programming/Rails/fb-start/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:25:29) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mStream Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (0.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.1ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;35;1mCategories Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered streams/_stream_categories (1.1ms)
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #13 of app/views/streams/_stream_filter.html.erb:
+10:     <th></th>
+11:     <th></th>
+12:   </tr>
+13: <% @streams.each do |stream| %>
+14:   <tr>
+15:     <td><fb:profile-pic uid="<%= stream.user.fb_user_id.to_i %>" facebook-logo="true" size="thumb" ></fb:profile-pic></td>
+16:     <td><%=h stream.name %></td>
+
+    app/views/streams/_stream_filter.html.erb:13
+    app/views/streams/new.html.erb:25
+    app/controllers/streams_controller.rb:51:in `new'
+
+Rendered rescues/_trace (59.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering /Users/sthorpe/Programming/Rails/fb-start/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:28:14) [GET]
+  [4;36;1mUser Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mStream Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (0.4ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.3ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;35;1mCategories Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered streams/_stream_categories (1.1ms)
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #13 of app/views/streams/_stream_filter.html.erb:
+10:     <th></th>
+11:     <th></th>
+12:   </tr>
+13: <% @streams.each do |stream| %>
+14:   <tr>
+15:     <td><fb:profile-pic uid="<%= stream.user.fb_user_id.to_i %>" facebook-logo="true" size="thumb" ></fb:profile-pic></td>
+16:     <td><%=h stream.name %></td>
+
+    app/views/streams/_stream_filter.html.erb:13
+    app/views/streams/new.html.erb:25
+    app/controllers/streams_controller.rb:51:in `new'
+
+Rendered rescues/_trace (147.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering /Users/sthorpe/Programming/Rails/fb-start/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-10-23 10:29:37) [GET]
+Redirected to http://localhost:3000/login
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-10-23 10:29:37) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_nav (16.1ms)
+Completed in 47ms (View: 44, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#link_user_accounts (for 127.0.0.1 at 2009-10-23 10:29:51) [GET]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (40.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`fb_user_id` = 503484735) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 58ms (DB: 43) | 302 Found [http://localhost/users/link_user_accounts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:29:51) [GET]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStream Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (0.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;35;1mCategories Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered streams/_stream_categories (1.1ms)
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #13 of app/views/streams/_stream_filter.html.erb:
+10:     <th></th>
+11:     <th></th>
+12:   </tr>
+13: <% @streams.each do |stream| %>
+14:   <tr>
+15:     <td><fb:profile-pic uid="<%= stream.user.fb_user_id.to_i %>" facebook-logo="true" size="thumb" ></fb:profile-pic></td>
+16:     <td><%=h stream.name %></td>
+
+    app/views/streams/_stream_filter.html.erb:13
+    app/views/streams/new.html.erb:25
+    app/controllers/streams_controller.rb:51:in `new'
+
+Rendered rescues/_trace (59.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering /Users/sthorpe/Programming/Rails/fb-start/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:30:27) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStream Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (0.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;35;1mCategories Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered streams/_stream_categories (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered streams/_stream_filter (8.1ms)
+Rendered shared/_nav (0.8ms)
+Completed in 56ms (View: 18, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:30:48) [GET]
+  Parameters: {"categories_id"=>"3"}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStream Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mCategories Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 6[0m
+  [4;35;1mStream Load (0.2ms)[0m   [0mSELECT * FROM `streams` WHERE (categories_id IN (3)) [0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;36;1mCategories Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered streams/_stream_categories (1.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered streams/_stream_filter (5.2ms)
+Rendered shared/_nav (0.7ms)
+Completed in 42ms (View: 14, DB: 8) | 200 OK [http://localhost/streams/new?categories_id=3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:30:51) [GET]
+  Parameters: {"categories_id"=>"4"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStream Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (0.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM `streams` WHERE (categories_id IN (4)) [0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;35;1mCategories Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered streams/_stream_categories (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered streams/_stream_filter (3.6ms)
+Rendered shared/_nav (0.7ms)
+Completed in 41ms (View: 13, DB: 7) | 200 OK [http://localhost/streams/new?categories_id=4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:30:53) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStream Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (0.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;35;1mCategories Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered streams/_stream_categories (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered streams/_stream_filter (8.1ms)
+Rendered shared/_nav (0.7ms)
+Completed in 49ms (View: 17, DB: 9) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:32:19) [GET]
+  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStream Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mCategories Load (0.4ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 6[0m
+  [4;35;1mStream Load (0.3ms)[0m   [0mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;36;1mCategories Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+Rendered streams/_stream_categories (1.1ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered streams/_stream_filter (10.9ms)
+Rendered shared/_nav (0.8ms)
+Completed in 63ms (View: 21, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:32:22) [GET]
+  Parameters: {"fb_friends"=>"true"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStream Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (0.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+
+NameError (undefined local variable or method `facebook_session' for #<Stream:0x2213ad4>):
+  app/models/stream.rb:22:in `sort_by_categories'
+  app/controllers/streams_controller.rb:44:in `new'
+
+Rendered rescues/_trace (123.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering /Users/sthorpe/Programming/Rails/fb-start/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:33:02) [GET]
+  Parameters: {"fb_friends"=>"true"}
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStream Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (0.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.3ms)[0m   [0;1mSELECT * FROM `streams` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+facebook.friends.get (0.292937994003296) uid = 503484735
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;35;1mCategories Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered streams/_stream_categories (1.1ms)
+Rendered streams/_stream_filter (0.1ms)
+Rendered shared/_nav (0.8ms)
+Completed in 349ms (View: 8, DB: 9) | 200 OK [http://localhost/streams/new?fb_friends=true]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-10-23 10:33:05) [GET]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStream Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (0.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.1ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;35;1mCategories Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+Rendered streams/_stream_categories (1.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered streams/_stream_filter (8.0ms)
+Rendered shared/_nav (0.8ms)
+Completed in 46ms (View: 18, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (267.1ms)[0m   [0;1mDROP DATABASE IF EXISTS `fb_start_test`[0m
+  [4;35;1mSQL (45.0ms)[0m   [0mCREATE DATABASE `fb_start_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (368.3ms)[0m   [0mCREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (109.3ms)[0m   [0mCREATE TABLE `facebook_templates` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `bundle_id` varchar(255), `template_name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (26.4ms)[0m   [0mCREATE TABLE `streams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime, `categories_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (55.9ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(40), `name` varchar(100) DEFAULT '', `email` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `fb_user_id` bigint, `email_hash` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (200.8ms)[0m   [0;1mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (14.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091019013137')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091016182301')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091016182705')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091016233453')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091017193634')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091017193944')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (15.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (82.5ms)[0m   [0;1mDROP DATABASE IF EXISTS `fb_start_test`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE DATABASE `fb_start_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mCREATE TABLE `facebook_templates` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `bundle_id` varchar(255), `template_name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE TABLE `streams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime, `categories_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(40), `name` varchar(100) DEFAULT '', `email` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `fb_user_id` bigint, `email_hash` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (22.4ms)[0m   [0;1mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (5.2ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091019013137')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091016182301')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091016182705')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091016233453')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091017193634')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091017193944')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (52.5ms)[0m   [0;1mDROP DATABASE IF EXISTS `fb_start_test`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE DATABASE `fb_start_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE TABLE `facebook_templates` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `bundle_id` varchar(255), `template_name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE TABLE `streams` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime, `categories_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(40), `name` varchar(100) DEFAULT '', `email` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `fb_user_id` bigint, `email_hash` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (25.9ms)[0m   [0;1mCREATE UNIQUE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (13.9ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091019013137')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091016182301')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091016182705')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091016233453')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091017193634')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091017193944')[0m

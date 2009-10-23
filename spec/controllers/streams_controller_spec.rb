@@ -32,13 +32,6 @@ describe StreamsController do
 
   describe "POST create" do
 
-    describe "with valid params" do
-      it "assigns a newly created stream as @stream" do
-        Stream.stub!(:new).with({'these' => 'params'}).and_return(mock_stream(:save => true))
-        post :create, :stream => {:these => 'params'}
-        assigns[:stream].should equal(mock_stream)
-      end
-    end
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved stream as @stream" do
@@ -105,12 +98,6 @@ describe StreamsController do
       Stream.should_receive(:find).with("37").and_return(mock_stream)
       mock_stream.should_receive(:destroy)
       delete :destroy, :id => "37"
-    end
-
-    it "redirects to the streams list" do
-      Stream.stub!(:find).and_return(mock_stream(:destroy => true))
-      delete :destroy, :id => "1"
-      response.should redirect_to(streams_url)
     end
   end
 

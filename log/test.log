@@ -2700,3 +2700,1272 @@ Rendering template within layouts/application
 Rendering streams/index
 Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams]
   [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStream Columns (33.1ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+Rendering streams/show.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+Rendering streams/index.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+Rendering streams/edit.html.erb
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#destroy (for 0.0.0.0 at 2009-10-23 10:34:15) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/categories
+Completed in 4ms (DB: 5) | 302 Found [http://test.host/categories/37]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#destroy (for 0.0.0.0 at 2009-10-23 10:34:15) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/categories
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:34:15) [PUT]
+  Parameters: {"id"=>"37", "categories"=>{"these"=>"params"}}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/37?categories%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:34:15) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:34:15) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:34:15) [PUT]
+  Parameters: {"id"=>"37", "categories"=>{"these"=>"params"}}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/37?categories%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:34:15) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/categories/1011
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:34:15) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/categories/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2009-10-23 10:34:15) [POST]
+  Parameters: {"categories"=>{"these"=>"params"}}
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories?categories%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2009-10-23 10:34:15) [POST]
+  Parameters: {"categories"=>{}}
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2009-10-23 10:34:15) [POST]
+  Parameters: {"categories"=>{"these"=>"params"}}
+Redirected to http://test.host/categories/1015
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/categories?categories%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2009-10-23 10:34:15) [POST]
+  Parameters: {"categories"=>{}}
+Redirected to http://test.host/categories/1016
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/categories?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#edit (for 0.0.0.0 at 2009-10-23 10:34:15) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/37/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#new (for 0.0.0.0 at 2009-10-23 10:34:15) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#show (for 0.0.0.0 at 2009-10-23 10:34:15) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/37]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#index (for 0.0.0.0 at 2009-10-23 10:34:15) [GET]
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategories Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mCategories Create (37.8ms)[0m   [0;1mINSERT INTO `categories` (`name`, `updated_at`, `created_at`) VALUES('value for name', '2009-10-23 17:34:15', '2009-10-23 17:34:15')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (20.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#destroy (for 0.0.0.0 at 2009-10-23 10:34:15) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/streams/new
+Completed in 72ms (DB: 60) | 302 Found [http://test.host/streams/37]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#destroy (for 0.0.0.0 at 2009-10-23 10:34:15) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/new
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:34:15) [PUT]
+  Parameters: {"stream"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37?stream%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:34:15) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:34:15) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:34:15) [PUT]
+  Parameters: {"stream"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37?stream%5Bthese%5D=params]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:34:15) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/1027
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:34:15) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/1028
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:34:15) [POST]
+  Parameters: {"stream"=>{"these"=>"params"}}
+  [4;36;1mCategories Load (0.2ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 6[0m
+  [4;35;1mStream Load (0.1ms)[0m   [0mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/streams?stream%5Bthese%5D=params]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:34:15) [POST]
+  Parameters: {"stream"=>{}}
+  [4;36;1mCategories Load (0.2ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 6[0m
+  [4;35;1mStream Load (0.1ms)[0m   [0mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/streams?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:34:15) [POST]
+  Parameters: {"stream"=>{"these"=>"params"}}
+  [4;36;1mCategories Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 6[0m
+  [4;35;1mStream Load (0.2ms)[0m   [0mSELECT * FROM `streams` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#edit (for 0.0.0.0 at 2009-10-23 10:34:15) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 1) | 200 OK [http://test.host/streams/37/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#show (for 0.0.0.0 at 2009-10-23 10:34:15) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#index (for 0.0.0.0 at 2009-10-23 10:34:15) [GET]
+Rendering template within layouts/application
+Rendering streams/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStream Columns (29.6ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStream Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mStream Create (0.3ms)[0m   [0mINSERT INTO `streams` (`name`, `updated_at`, `categories_id`, `user_id`, `created_at`) VALUES('value for name', '2009-10-23 17:36:45', 1, 1, '2009-10-23 17:36:45')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStream Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+Rendering streams/show.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+Rendering streams/index.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+Rendering streams/edit.html.erb
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#destroy (for 0.0.0.0 at 2009-10-23 10:36:57) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/categories
+Completed in 4ms (DB: 5) | 302 Found [http://test.host/categories/37]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#destroy (for 0.0.0.0 at 2009-10-23 10:36:57) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/categories
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:36:57) [PUT]
+  Parameters: {"id"=>"37", "categories"=>{"these"=>"params"}}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/37?categories%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:36:57) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:36:57) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:36:57) [PUT]
+  Parameters: {"id"=>"37", "categories"=>{"these"=>"params"}}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/37?categories%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:36:57) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/categories/1011
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:36:57) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/categories/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2009-10-23 10:36:57) [POST]
+  Parameters: {"categories"=>{"these"=>"params"}}
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories?categories%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2009-10-23 10:36:57) [POST]
+  Parameters: {"categories"=>{}}
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2009-10-23 10:36:57) [POST]
+  Parameters: {"categories"=>{"these"=>"params"}}
+Redirected to http://test.host/categories/1015
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/categories?categories%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2009-10-23 10:36:57) [POST]
+  Parameters: {"categories"=>{}}
+Redirected to http://test.host/categories/1016
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/categories?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#edit (for 0.0.0.0 at 2009-10-23 10:36:57) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/37/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#new (for 0.0.0.0 at 2009-10-23 10:36:57) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#show (for 0.0.0.0 at 2009-10-23 10:36:57) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/37]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#index (for 0.0.0.0 at 2009-10-23 10:36:57) [GET]
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategories Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mCategories Create (0.3ms)[0m   [0;1mINSERT INTO `categories` (`name`, `updated_at`, `created_at`) VALUES('value for name', '2009-10-23 17:36:57', '2009-10-23 17:36:57')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#destroy (for 0.0.0.0 at 2009-10-23 10:36:57) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/streams/new
+Completed in 12ms (DB: 3) | 302 Found [http://test.host/streams/37]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#destroy (for 0.0.0.0 at 2009-10-23 10:36:57) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/new
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:36:57) [PUT]
+  Parameters: {"stream"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37?stream%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:36:57) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:36:57) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:36:57) [PUT]
+  Parameters: {"stream"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37?stream%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:36:57) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/1027
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:36:57) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/1028
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:36:57) [POST]
+  Parameters: {"stream"=>{"these"=>"params"}}
+  [4;36;1mCategories Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 6[0m
+  [4;35;1mStream Load (0.1ms)[0m   [0mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/streams?stream%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:36:57) [POST]
+  Parameters: {"stream"=>{}}
+  [4;36;1mCategories Load (0.2ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 6[0m
+  [4;35;1mStream Load (0.1ms)[0m   [0mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/streams?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:36:57) [POST]
+  Parameters: {"stream"=>{"these"=>"params"}}
+  [4;36;1mCategories Load (0.2ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 6[0m
+  [4;35;1mStream Load (0.1ms)[0m   [0mSELECT * FROM `streams` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#edit (for 0.0.0.0 at 2009-10-23 10:36:57) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 1) | 200 OK [http://test.host/streams/37/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#show (for 0.0.0.0 at 2009-10-23 10:36:57) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing StreamsController#index (for 0.0.0.0 at 2009-10-23 10:36:57) [GET]
+Rendering template within layouts/application
+Rendering streams/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mStream Create (0.2ms)[0m   [0mINSERT INTO `streams` (`name`, `updated_at`, `categories_id`, `user_id`, `created_at`) VALUES('value for name', '2009-10-23 17:36:57', 1, 1, '2009-10-23 17:36:57')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#index (for 0.0.0.0 at 2009-10-23 10:37:16) [GET]
+Rendering template within layouts/application
+Rendering streams/index
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://test.host/streams]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#show (for 0.0.0.0 at 2009-10-23 10:37:16) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#edit (for 0.0.0.0 at 2009-10-23 10:37:16) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/streams/37/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:37:16) [POST]
+  Parameters: {"stream"=>{"these"=>"params"}}
+  [4;35;1mCategories Load (0.8ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM `streams` [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:37:17) [POST]
+  Parameters: {"stream"=>{"these"=>"params"}}
+  [4;35;1mCategories Load (0.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+Completed in 6ms (View: 3, DB: 2) | 200 OK [http://test.host/streams?stream%5Bthese%5D=params]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:37:17) [POST]
+  Parameters: {"stream"=>{}}
+  [4;35;1mCategories Load (0.6ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+Completed in 3ms (View: 0, DB: 1) | 200 OK [http://test.host/streams?]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:37:17) [PUT]
+  Parameters: {"stream"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 4) | 200 OK [http://test.host/streams/37?stream%5Bthese%5D=params]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:37:17) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/1008
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:37:17) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/1009
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:37:17) [PUT]
+  Parameters: {"stream"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37?stream%5Bthese%5D=params]
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:37:17) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:37:17) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#destroy (for 0.0.0.0 at 2009-10-23 10:37:17) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/streams/new
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/streams/37]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#destroy (for 0.0.0.0 at 2009-10-23 10:37:17) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/new
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#index (for 0.0.0.0 at 2009-10-23 10:38:07) [GET]
+Rendering template within layouts/application
+Rendering streams/index
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://test.host/streams]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#show (for 0.0.0.0 at 2009-10-23 10:38:07) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#edit (for 0.0.0.0 at 2009-10-23 10:38:08) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:38:08) [POST]
+  Parameters: {"stream"=>{"these"=>"params"}}
+  [4;35;1mCategories Load (0.7ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+Completed in 4ms (View: 0, DB: 1) | 200 OK [http://test.host/streams?stream%5Bthese%5D=params]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:38:08) [POST]
+  Parameters: {"stream"=>{}}
+  [4;35;1mCategories Load (0.2ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.1ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/streams?]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:38:08) [PUT]
+  Parameters: {"stream"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37?stream%5Bthese%5D=params]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:38:08) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/1007
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:38:08) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/1008
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:38:08) [PUT]
+  Parameters: {"stream"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37?stream%5Bthese%5D=params]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:38:08) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:38:08) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#destroy (for 0.0.0.0 at 2009-10-23 10:38:08) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/streams/new
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/streams/37]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#destroy (for 0.0.0.0 at 2009-10-23 10:38:08) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/new
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStream Columns (7.2ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+Rendering streams/show.html.erb
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+Rendering streams/index.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+Rendering streams/edit.html.erb
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#destroy (for 0.0.0.0 at 2009-10-23 10:38:44) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/categories
+Completed in 4ms (DB: 5) | 302 Found [http://test.host/categories/37]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#destroy (for 0.0.0.0 at 2009-10-23 10:38:44) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/categories
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:38:44) [PUT]
+  Parameters: {"id"=>"37", "categories"=>{"these"=>"params"}}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/37?categories%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:38:44) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:38:44) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:38:44) [PUT]
+  Parameters: {"id"=>"37", "categories"=>{"these"=>"params"}}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/37?categories%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:38:44) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/categories/1011
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/categories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#update (for 0.0.0.0 at 2009-10-23 10:38:44) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/categories/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/categories/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2009-10-23 10:38:44) [POST]
+  Parameters: {"categories"=>{"these"=>"params"}}
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories?categories%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2009-10-23 10:38:44) [POST]
+  Parameters: {"categories"=>{}}
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2009-10-23 10:38:44) [POST]
+  Parameters: {"categories"=>{"these"=>"params"}}
+Redirected to http://test.host/categories/1015
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/categories?categories%5Bthese%5D=params]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2009-10-23 10:38:44) [POST]
+  Parameters: {"categories"=>{}}
+Redirected to http://test.host/categories/1016
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/categories?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#edit (for 0.0.0.0 at 2009-10-23 10:38:44) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/37/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#new (for 0.0.0.0 at 2009-10-23 10:38:44) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#show (for 0.0.0.0 at 2009-10-23 10:38:44) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories/37]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CategoriesController#index (for 0.0.0.0 at 2009-10-23 10:38:44) [GET]
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategories Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mCategories Create (0.3ms)[0m   [0;1mINSERT INTO `categories` (`name`, `updated_at`, `created_at`) VALUES('value for name', '2009-10-23 17:38:44', '2009-10-23 17:38:44')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mStream Create (0.4ms)[0m   [0mINSERT INTO `streams` (`name`, `updated_at`, `categories_id`, `user_id`, `created_at`) VALUES('value for name', '2009-10-23 17:38:44', 1, 1, '2009-10-23 17:38:44')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#destroy (for 0.0.0.0 at 2009-10-23 10:38:44) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/streams/new
+Completed in 4ms (DB: 4) | 302 Found [http://test.host/streams/37]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:38:45) [PUT]
+  Parameters: {"stream"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37?stream%5Bthese%5D=params]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:38:45) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:38:45) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:38:45) [PUT]
+  Parameters: {"stream"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37?stream%5Bthese%5D=params]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:38:45) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/1026
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#update (for 0.0.0.0 at 2009-10-23 10:38:45) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/streams/1027
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/streams/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:38:45) [POST]
+  Parameters: {"stream"=>{"these"=>"params"}}
+  [4;35;1mCategories Load (0.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.1ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/streams?stream%5Bthese%5D=params]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#create (for 0.0.0.0 at 2009-10-23 10:38:45) [POST]
+  Parameters: {"stream"=>{}}
+  [4;35;1mCategories Load (0.2ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.1ms)[0m   [0;1mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+Completed in 2ms (View: 0, DB: 1) | 200 OK [http://test.host/streams?]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#edit (for 0.0.0.0 at 2009-10-23 10:38:45) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#show (for 0.0.0.0 at 2009-10-23 10:38:45) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/application
+Rendering streams/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams/37]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing StreamsController#index (for 0.0.0.0 at 2009-10-23 10:38:45) [GET]
+Rendering template within layouts/application
+Rendering streams/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/streams]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
