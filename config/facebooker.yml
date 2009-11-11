@@ -36,10 +36,10 @@ test:
     server_alive_interval: 0
 
 production:
-  api_key: ec1c121c113fb157e91027b83b213f2f
-  secret_key: cd6438aba8fd325f6d415cd098dc9a60
+  api_key: 49b0f4c0fb1d7fbcc21fd9dee30369fa
+  secret_key: 3258a0fa71cec2229564d304c64077a5
   canvas_page_name: 
-  callback_url: http://174.143.155.239
+  callback_url: http://friendne.ws
   set_asset_host_to_callback_url: true   
   tunnel:
     public_host_username: 
