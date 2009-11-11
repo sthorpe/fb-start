@@ -42,6 +42,7 @@ class StreamsController < ApplicationController
     @stream = Stream.new
     @categories = Categories.find(:all, :limit => 6)    
     @streams = @stream.sort_by_categories(params, facebook_session)
+    @location = facebook_session.user.current_location
     
     respond_to do |format|
       format.html # new.html.erb

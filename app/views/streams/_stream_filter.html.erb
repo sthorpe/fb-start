@@ -14,6 +14,7 @@
   <tr>
     <td><fb:profile-pic uid="<%= stream.user.fb_user_id.to_i %>" facebook-logo="true" size="thumb" ></fb:profile-pic></td>
     <td><%=h stream.name %></td>
+    <td><%= @location.city %></td>
     <% if stream.user == current_user %>
       <td><%= link_to image_tag("/images/icons/delete.png", :style => "text-decoration:none;border:0;"), stream, :confirm => 'Are you sure?', :method => :delete %></td>
     <% else %>

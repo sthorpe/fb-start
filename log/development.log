@@ -15215,3 +15215,160 @@ Completed in 46ms (View: 18, DB: 7) | 200 OK [http://localhost/]
   [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091016233453')[0m
   [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091017193634')[0m
   [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091017193944')[0m
+  [4;36;1mSQL (144.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-11-11 11:42:35) [GET]
+  [4;36;1mUser Columns (300.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 622ms (DB: 446) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-11-11 11:42:36) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1[0m
+Rendered shared/_nav (28.2ms)
+Completed in 90ms (View: 84, DB: 3) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#link_user_accounts (for 127.0.0.1 at 2009-11-11 11:42:46) [GET]
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1[0m
+  [4;36;1mUser Load (24.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`fb_user_id` = 503484735) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 118ms (DB: 28) | 302 Found [http://localhost/users/link_user_accounts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-11-11 11:42:46) [GET]
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStream Columns (70.9ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mCategories Load (62.4ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 6[0m
+  [4;35;1mStream Load (2.4ms)[0m   [0mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;36;1mCategories Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered streams/_stream_filter (10.8ms)
+Rendered shared/_nav (0.9ms)
+Completed in 239ms (View: 30, DB: 141) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#destroy (for 127.0.0.1 at 2009-11-11 11:43:08) [DELETE]
+  Parameters: {"authenticity_token"=>"o9xyCQXYQHI9utvr0JXgaUH6o56BcEo1bXd0/41LaPA=", "id"=>"6"}
+  [4;36;1mStream Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mStream Load (2.1ms)[0m   [0mSELECT * FROM `streams` WHERE (`streams`.`id` = 6) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStream Destroy (42.2ms)[0m   [0mDELETE FROM `streams` WHERE `id` = 6[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/streams/new
+Completed in 59ms (DB: 48) | 302 Found [http://localhost/streams/6]
+  [4;35;1mSQL (3.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-11-11 11:43:08) [GET]
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStream Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mCategories Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 6[0m
+  [4;35;1mStream Load (0.2ms)[0m   [0mSELECT * FROM `streams` [0m
+Rendering template within layouts/application
+Rendering streams/new
+  [4;36;1mCategories Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered streams/_stream_filter (7.4ms)
+Rendered shared/_nav (0.8ms)
+Completed in 131ms (View: 15, DB: 11) | 200 OK [http://localhost/streams/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-11-11 11:47:22) [GET]
+  [4;36;1mUser Columns (6.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (8.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStream Columns (47.1ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (29.3ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.3ms)[0m   [0;1mSELECT * FROM `streams` [0m
+
+NoMethodError (undefined method `getInfo' for #<Facebooker::Session:0x249585c>):
+  app/controllers/streams_controller.rb:45:in `new'
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering /Users/sthorpe/Programming/Rails/fb-start/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-11-11 11:47:39) [GET]
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStream Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `streams`[0m
+  [4;36;1mCategories Load (0.3ms)[0m   [0;1mSELECT * FROM `categories` LIMIT 6[0m
+  [4;35;1mStream Load (0.2ms)[0m   [0mSELECT * FROM `streams` [0m
+facebook.users.getInfo (1.37703204154968) uids = 503484735, fields = status,political,pic_small,name,quotes,is_app_user,tv,profile_update_time,meeting_sex,hs_info,timezone,relationship_status,hometown_location,about_me,wall_count,significant_other_id,pic_big,music,work_history,sex,religion,notes_count,activities,pic_square,movies,has_added_app,education_history,birthday,birthday_date,first_name,meeting_for,last_name,interests,current_location,pic,books,affiliations,locale,profile_url,proxied_email,email_hashes,allowed_restrictions,pic_with_logo,pic_big_with_logo,pic_small_with_logo,pic_square_with_logo,online_presence,verified,profile_blurb,username,website,is_blocked,family
+Rendering template within layouts/application
+Rendering streams/new
+  [4;36;1mCategories Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered streams/_stream_filter (9.8ms)
+Rendered shared/_nav (0.7ms)
+Completed in 1437ms (View: 20, DB: 7) | 200 OK [http://localhost/streams/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StreamsController#new (for 127.0.0.1 at 2009-11-11 11:47:58) [GET]
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStream Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `streams`[0m
+  [4;35;1mCategories Load (0.5ms)[0m   [0mSELECT * FROM `categories` LIMIT 6[0m
+  [4;36;1mStream Load (0.2ms)[0m   [0;1mSELECT * FROM `streams` [0m
+facebook.users.getInfo (0.557896137237549) uids = 503484735, fields = status,political,pic_small,name,quotes,is_app_user,tv,profile_update_time,meeting_sex,hs_info,timezone,relationship_status,hometown_location,about_me,wall_count,significant_other_id,pic_big,music,work_history,sex,religion,notes_count,activities,pic_square,movies,has_added_app,education_history,birthday,birthday_date,first_name,meeting_for,last_name,interests,current_location,pic,books,affiliations,locale,profile_url,proxied_email,email_hashes,allowed_restrictions,pic_with_logo,pic_big_with_logo,pic_small_with_logo,pic_square_with_logo,online_presence,verified,profile_blurb,username,website,is_blocked,family
+Rendering template within layouts/application
+Rendering streams/new
+  [4;35;1mCategories Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered streams/_stream_filter (9.4ms)
+Rendered shared/_nav (0.7ms)
+Completed in 705ms (View: 19, DB: 8) | 200 OK [http://localhost/streams/new]
