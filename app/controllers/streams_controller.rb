@@ -41,7 +41,7 @@ class StreamsController < ApplicationController
   def new
     @stream = Stream.new
     @categories = Categories.find(:all, :limit => 6)    
-    @streams = @stream.sort_by_categories_and_friends(params, facebook_session)
+    @streams = @stream.sort_by_categories(params, facebook_session)
     
     respond_to do |format|
       format.html # new.html.erb
