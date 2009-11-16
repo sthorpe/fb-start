@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* CSS Document */
+.canvas
+{
+	font-family: "lucida grande" ,tahoma,verdana,arial,sans-serif; 
+	text-decoration:none;
+	outline-style:none;
+	list-style-type:none;
+}
+.friendtable
+{
+	list-style-type:none;
+}
+li
+{
+	margin-top:30px;
+	margin-bottom:10px;
+	list-style-type: none;
+}
+.newsitem
+{
+	margin-top:10px;
+	padding-bottom:30px;
+	margin-bottom:30px;
+}
+.friend
+{
+	display:block;
+	padding-bottom:20px;
+}
+.headline
+ {
+	list-style-type:none;
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	color: #333;
+	font-align:left;
+	font-size: 20px;
+	font-weight:bold;
+	padding-top: 20px;
+}   
+.summary
+{
+     font-family: "lucida grande" ,tahoma,verdana,arial,sans-serif;  
+     font-size: 11px;  
+     color: #333333;  
+}
+.source
+{
+     font-size: 10px;
+     color: #333333;  
+	 font-weight: bold;  
+	 float:right;
+
+}
+.affected
+{	
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    color: #333333;  
+	padding-top:25px;
+	padding-bottom:20px;
+    font-size: 12px;  
+    font-weight: bold;  
+ }  
+.friend
+{
+	float:left;
+	display:inline;
+	padding-top:10px;
+	padding-bottom:30px;
+	padding-right:30px;
+	padding-left:10px;
+}
+.friend #friendpic 
+{
+	float:left;
+	width:50px;
+	height:50px;
+	padding-right:10px;
+	padding-bottom:10px;
+  }
+.friend #friendname 
+{
+   text-align: left;
+       font-size: 10px;
+	   font-weight:bold;
+}
+.friend #friendloc
+{
+	text-align:left;
+	font-size: 10px;
+     color: #333333;  
+
+}
+.clearfix:after 
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {display:inline-block;}
+/* Hide from IE Mac \*/
+	.clearfix {display:block;}
+/* End hide from IE Mac */

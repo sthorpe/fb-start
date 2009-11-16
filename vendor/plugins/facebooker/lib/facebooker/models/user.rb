@@ -187,6 +187,10 @@ module Facebooker
       end
     end
     
+    def friends_location
+      @friends_loc = session.post('facebook.users.getInfo', :uids => friends.map{|f| f.id}.join(','), :fields => ['uid', 'name', 'current_location', 'hometown_location'])
+    end
+    
     ###
     # Retrieve profile data for logged in user
     # Optional: list of fields to retrieve as symbols

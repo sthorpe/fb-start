@@ -3,22 +3,8 @@
 
 
 <br/>
-  <% form_for(@stream) do |f| %>
-    <%= f.error_messages %>
-    <p>
-      <u>Post some news!</u>
-      <br/>    
-      <%= f.text_area :name, :rows => 2, :cols => 30 %>
-    </p>
-    <p>
-      <label for="occ">Filter</label>
-  		<%= f.collection_select (:categories_id, @categories, :id, :name, :prompt => 'Select') %>
-  	</p>
-    <p>
-      <%= f.submit 'Post' %>
-    </p>
-  <% end %>
-<br/>
+
+<%= link_to("Everyone", '/') %> | <%= link_to("Just my friends and their friends", '/streams/new?fb_friends=true') %>
 
 <%= render :partial => "stream_filter" %>
 

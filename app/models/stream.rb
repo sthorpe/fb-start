@@ -4,7 +4,7 @@ class Stream < ActiveRecord::Base
   
   attr_accessor :search_keys
   
-  validates_presence_of :categories_id, :message => "^ Please select a category"
+  #validates_presence_of :categories_id, :message => "^ Please select a category"
   
   def user
     user = User.find_by_id(self.user_id)
@@ -22,7 +22,7 @@ class Stream < ActiveRecord::Base
     elsif params[:fb_friends] == "true" && facebook_session
       @streams = Stream.find_friends_streams(facebook_session)
     else 
-      return @streams = Stream.all
+      return @streams = Stream.find(:all, :order => 'created_at DESC')
     end
   end
   
@@ -51,7 +51,7 @@ class Stream < ActiveRecord::Base
   end
   
   def self.find_friends_streams(facebook_session)
-    streams = self.all
+    streams = self.find(:all, :order => 'created_at DESC')
     fb_streams = streams.select {|x| x if x.user.fb_user_id}
     friends_fb_streams = fb_streams.select {|x| x if User.is_a_facebook_friend?(facebook_session, x.user)}
     return friends_fb_streams

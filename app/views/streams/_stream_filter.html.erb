@@ -5,29 +5,11 @@
 }
 </style>
 <table width="20%" border=0>
-  <tr>
-    <th align="left" width="20px">Related News</th>
-    <th></th>
-    <th></th>
-  </tr>
-<% @streams.each do |stream| %>
-  <tr>
-    <td><fb:profile-pic uid="<%= stream.user.fb_user_id.to_i %>" facebook-logo="true" size="thumb" ></fb:profile-pic></td>
-    <td><%=h stream.name %></td>
-    <td><%= @location.city %></td>
-    <% if stream.user == current_user %>
-      <td><%= link_to image_tag("/images/icons/delete.png", :style => "text-decoration:none;border:0;"), stream, :confirm => 'Are you sure?', :method => :delete %></td>
-    <% else %>
-      <td><%= link_to("Pimp it", "/streams/send_email?uid=#{stream.user.fb_user_id.to_i}&id=#{stream.id}") %></td>
-    <% end %>
-  </tr>
-  <tr>
-   <td><div id="dividedLinks"></div></td>
-   <td><div id="dividedLinks"></div></td>
-   <td><div id="dividedLinks"></div></td>
-  </tr>
+<% @xmlroot.each_element('//title') do |element| %>
+<tr>
+ <td><%= element.text %></td>
+</tr>
 <% end %>
-
 </table>
 
 <br />
