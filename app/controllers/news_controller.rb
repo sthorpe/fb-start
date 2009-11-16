@@ -1,5 +1,5 @@
 class NewsController < ApplicationController
-  before_filter :login_required, :only => [ :new ]
+  before_filter :login_required, :only => [ :index ]
 
   def index
     news_item = News.new
