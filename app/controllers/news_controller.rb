@@ -3,6 +3,7 @@ class NewsController < ApplicationController
 
   def index
     @all_news = News.new
+    @friend_locations = facebook_session.user.friends_location
   
     respond_to do |format|
       format.html # index.html.erb

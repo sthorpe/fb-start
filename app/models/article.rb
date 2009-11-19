@@ -20,9 +20,9 @@ class Article
   end
   
   # Finding friends within 200 miles of this location.
-  def friends(facebook_session)
+  def friends(facebook_session, friends_location)
     article_friends = []
-    facebook_session.user.friends_location[0..50].each do |friend_location|
+    friends_location[0..50].each do |friend_location|
       location = friend_location['current_location']
       begin
         if friend_geocode(location).distance_from(self.location, :units=>:miles).round <= 200
