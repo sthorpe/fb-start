@@ -1,21 +1,20 @@
-require 'geokit'
+require 'simple-rss'
+require 'open-uri'
 
-class News < ActiveRecord::Base
+class News
+  attr_accessor :articles
+  SimpleRSS.item_tags << :"geo:lat"
+  SimpleRSS.item_tags << :"geo:long"
   
-  include Geokit::Geocoders
-  
-  def source
-    res = Net::HTTP.post_form(URI.parse('http://ws.geonames.org/rssToGeoRSS'), {'feedUrl'=>'http://rss.cnn.com/rss/cnn_topstories.rss'})
-    xml = REXML::Document.new(res.body)
-    @xmlroot = xml.root
-    a = @xmlroot.elements.to_a('channel')
-    cc = a.group_by {|b| b.elements['item/title'].text}
-    dd = cc.map {|c,l| [c, l.map {|b| MultiGeocoder.geocode(b.elements['item/geo:lat'].text.to_s+","+b.elements['item/geo:long'].text.to_s)}]}.flatten
-    return dd
+  def initialize
+    rss = SimpleRSS.parse open('http://ws.geonames.org/rssToGeoRSS?feedUrl=http://rss.cnn.com/rss/cnn_topstories.rss')
+    self.articles = []
+    if rss 
+      rss.items.size.times do |num|
+        article = Article.new(rss.items[num])
+        self.articles << article
+      end
+    end
   end
-  
-  def geocode(city, state, country)
-    return MultiGeocoder.geocode(city+","+state+","+country)
-  end  
   
 end

@@ -2,14 +2,8 @@ class NewsController < ApplicationController
   before_filter :login_required, :only => [ :index ]
 
   def index
-    news_item = News.new
-    @all_news = []
-    @all_news << news_item
-    
-    @friends_locations = facebook_session.user.friends_location[0]
-    @friend_loc = news_item.geocode(@friends_locations['current_location']['city'], @friends_locations['current_location']['state'], @friends_locations['current_location']['country'])
-
-
+    @all_news = News.new
+  
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @news }

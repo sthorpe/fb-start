@@ -1,9 +1,7 @@
-<% @all_news.each do |news| %>
-  
-    News location: <%= news.source[1].city %><br/>
-    <b><%= news.source[0] %></b> is connected to <br/>
-    <fb:profile-pic uid="<%= facebook_session.user.friends[1].to_i%>" facebook-logo="true" size="thumb" ></fb:profile-pic> 
-    <%= facebook_session.user.friends_location[0]['name'] %><br/>
-    This story is <%= news.source[1].distance_from(@friend_loc, :units=>:miles).round %> miles away from him or her
-  
+<br/>
+<% @all_news.articles.each do |news| %>
+  <strong><%= link_to(news.title, news.link) %></strong><br/>
+  <br/>
+  <%= news.friends(facebook_session).inspect %>
+  <br/>
 <% end %>
