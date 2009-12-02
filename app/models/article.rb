@@ -16,7 +16,7 @@ class Article
   end
   
   def location
-    return self.geo_lat+","+self.geo_long unless self.geo_lat.blank
+    return self.geo_lat+","+self.geo_long unless self.geo_lat.blank?
   end
   
   # Finding friends within 200 miles of this location.
