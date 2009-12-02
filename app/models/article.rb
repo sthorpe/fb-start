@@ -20,11 +20,9 @@ class Article
   end
   
   # Finding friends within 200 miles of this location.
-  def friends(facebook_session, friends_locations)
+  def friends(facebook_session, friends_location)
     #FacebookFriends.asynch_getfriendslocation(self.location, facebook_session, friends_location)
     article_friends = []
-    friends_location = friends_locations[0..10]
-    
     friends_location.each do |friend_location|
       location = friend_location['current_location']
        if location && self.location
