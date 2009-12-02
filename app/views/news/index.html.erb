@@ -1,7 +1,9 @@
 <br/>
 <% @all_news.articles.each do |news| %>
-  <strong><%= link_to(news.title, news.link) %></strong><br/>
-  <br/>
-  <%= news.friends(facebook_session, @friend_locations).inspect %>
-  <br/>
+  <% if news.friends(facebook_session, @friend_locations) != [] %>
+    <strong><%= link_to(news.title, news.link) %></strong><br/>
+    <br/>
+    <%= news.friends(facebook_session, @friend_locations).inspect %>
+    <br/>
+  <% end %>
 <% end %>

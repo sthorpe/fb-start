@@ -10,7 +10,7 @@ class News
     rss = SimpleRSS.parse open('http://ws.geonames.org/rssToGeoRSS?feedUrl=http://rss.cnn.com/rss/cnn_topstories.rss')
     self.articles = []
     if rss 
-      rss.items.size.times do |num|
+      (10).times do |num|
         article = Article.new(rss.items[num])
         self.articles << article
       end
