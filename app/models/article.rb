@@ -1,5 +1,5 @@
 require 'geokit'
-class Article 
+class Article
   @@attr_names = ["title", "description", "link", "geo_lat", "geo_long"]
   attr_accessor *@@attr_names
   attr_accessor :location
@@ -20,17 +20,18 @@ class Article
   end
   
   # Finding friends within 200 miles of this location.
-  def friends(facebook_session, friends_locations)
+  def friends(facebook_session, friends_location)
     #FacebookFriends.asynch_getfriendslocation(self.location, facebook_session, friends_location)
     article_friends = []
-    friends_location = friends_locations[0..100]
-    
+    # Find all friends within 200 miles of this article.
     friends_location.each do |friend_location|
-      location = friend_location['current_location']
-       if location && self.location
+       if friend_location[:geo] && self.location
         begin
-          if friend_geocode(location).distance_from(self.location, :units=>:miles).round <= 200
-            article_friends << friend_location['name']
+          if friend_location[:geo].distance_from(self.location, :units=>:miles).round <= 200
+            article_friends << friend_location[:name]
+            puts "This user is good! #{friend_location[:name]}"
+          else
+            puts "BAD USR!!!!"
           end
         rescue Exception => e 
           puts "Error with Geocoding: #{e} with city: #{location['city']}, state: #{location['state']}, country: #{location['country']}"
@@ -40,9 +41,8 @@ class Article
     return article_friends
   end  
   
-  protected 
-    # This process takes a real long time. Need to build a cache for this.
-    def friend_geocode(location)
-      return GoogleGeocoder.geocode(location['city']+","+location['state']+","+location['country'])
-    end
+  # This process takes a real long time. Need to build a cache for this.
+  def self.friend_geocode(location)
+    return GoogleGeocoder.geocode(location['city']+","+location['state']+","+location['country'])
+  end
 end

@@ -75,6 +75,20 @@ class User < ActiveRecord::Base
   def self.is_a_facebook_friend?(facebook_session, facebook_user)
     return facebook_session.user.friends.include?(facebook_user.fb_user_id)
   end
+  
+  def self.facebook_friends_locations(facebook_session)
+    @friend_locations = facebook_session.user.friends_location
+    friends_location = []
+    friends_locations = @friend_locations
+    # Find all friends Geo Data
+    friends_locations.each do |friend_loc|
+      location = friend_loc['current_location']
+      if location
+        friends_location << {:geo => Article.friend_geocode(location), :name => friend_loc['name']}
+      end
+    end
+    return friends_location
+  end
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   #
