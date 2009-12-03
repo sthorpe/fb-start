@@ -2,8 +2,11 @@
 <% @all_news.articles.each do |news| %>
   <% if news.friends(facebook_session, @friend_locations) != [] %>
     <strong><%= link_to(news.title, news.link) %></strong><br/>
-    <br/>
-    <%= news.friends(facebook_session, @friend_locations).inspect %>
+    <br/> In the area:
+    <% news.friends(facebook_session, @friend_locations).each do |friend| %>
+      <fb:profile-pic uid="<%= friend[:uid] %>" facebook-logo="true" linked="true" size="thumb"></fb:profile-pic><br/>
+      <%= friend[:name] %>
+    <% end %>
     <br/>
   <% end %>
 <% end %>

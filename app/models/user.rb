@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
 
   
   has_many :streams
+  has_many :fb_friends
 
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
@@ -76,15 +77,27 @@ class User < ActiveRecord::Base
     return facebook_session.user.friends.include?(facebook_user.fb_user_id)
   end
   
-  def self.facebook_friends_locations(facebook_session)
-    @friend_locations = facebook_session.user.friends_location
+  def self.facebook_friends_locations(facebook_session, current_user)
     friends_location = []
-    friends_locations = @friend_locations[0..200]
-    # Find all friends Geo Data
-    friends_locations.each do |friend_loc|
-      location = friend_loc['current_location']
-      if location
-        friends_location << {:geo => Article.friend_geocode(location), :name => friend_loc['name']}
+    friends = current_user.fb_friends
+    if friends.size > 1
+      friends.each do |f|
+        friends_location << friend = {:name => f.name, :uid => f.fb_user_id, :geo => Marshal.load(f.location)} 
+      end
+    else
+      @friend_locations = facebook_session.user.friends_location
+      friends_locations = @friend_locations
+      # Find all friends Geo Data
+      friends_locations.each do |friend_loc|
+        location = friend_loc['current_location']
+        if location
+          @fb_friends = FbFriend.find(:all, :select => "fb_user_id").collect {|x| x.fb_user_id }
+          unless @fb_friends.include?(friend_loc['uid'].to_i)
+            friends_location << fb_loc = {:geo => Article.friend_geocode(location), :name => friend_loc['name'], :uid => friend_loc['uid']}
+            fb_friend = FbFriend.new(:user_id => current_user.id, :fb_user_id => friend_loc['uid'], :name => friend_loc['name'], :location => Marshal.dump(fb_loc[:geo]))
+            fb_friend.save!
+          end
+        end
       end
     end
     return friends_location

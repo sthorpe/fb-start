@@ -188,7 +188,7 @@ module Facebooker
     end
     
     def friends_location
-      @friends_loc = session.post('facebook.users.getInfo', :uids => friends.map{|f| f.id}.join(','), :fields => ['name', 'current_location'])
+      @friends_loc = session.post('facebook.users.getInfo', :uids => friends.map{|f| f.id}.join(','), :fields => ['uid', 'name', 'current_location'])
     end
     
     ###

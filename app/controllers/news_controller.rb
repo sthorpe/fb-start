@@ -3,7 +3,7 @@ class NewsController < ApplicationController
 
   def index
     @all_news = News.new
-    @friend_locations = User.facebook_friends_locations(facebook_session)
+    @friend_locations = User.facebook_friends_locations(facebook_session, current_user)
 
   
     respond_to do |format|
