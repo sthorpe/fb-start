@@ -79,7 +79,7 @@ class User < ActiveRecord::Base
   def self.facebook_friends_locations(facebook_session)
     @friend_locations = facebook_session.user.friends_location
     friends_location = []
-    friends_locations = @friend_locations
+    friends_locations = @friend_locations[0..200]
     # Find all friends Geo Data
     friends_locations.each do |friend_loc|
       location = friend_loc['current_location']
