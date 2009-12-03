@@ -43,6 +43,8 @@ class Article
   
   # This process takes a real long time. Need to build a cache for this.
   def self.friend_geocode(location)
-    return GoogleGeocoder.geocode(location['city']+","+location['state']+","+location['country'])
+    unless location['city'].nil? && location['state'].nil? && location['country'].nil?
+      return GoogleGeocoder.geocode(location['city']+","+location['state']+","+location['country'])
+    end
   end
 end
