@@ -1,16 +1,34 @@
-<br/>
+<div class="canvas">
+<div class="friendtable">
+<ol>
+<li>
 <% @all_news.each do |news| %>
   <% news.articles.each do |article| %>
     <% article_friends = article.friends(facebook_session, @friend_locations) %>
     <% if article_friends != [] %>
-      <strong><%= link_to(article.title, article.link) %></strong><br/>
-      <%= article.description %><br/>
-      <br/> In the area:<br/>
-      <% article_friends.each do |friend| %>
-        <fb:profile-pic uid="<%= friend[:uid] %>" facebook-logo="false" linked="true" size="thumb"></fb:profile-pic><br/>
-        <%= friend[:name] %><br/>
-      <% end %>
-      <br/>
+      <div class="newsitem <%= cycle('clearfix', '') %>">
+      <div class="headline"><p><%= link_to(article.title, article.link) %></p></div>
+      <div class="summary"><%= article.description %></div>
+      <div class="source">from CNN</div>
+        <div class="summary"></div>
+        <div class="affected">Who cares about it:</div>
+        <div class="friendtable">
+          <% article_friends.each do |friend| %>
+            <div class="friend">
+              <div id="friendpic"><fb:profile-pic uid="<%= friend[:uid] %>" facebook-logo="false" linked="true" size="thumb"></fb:profile-pic></div>
+              <div id="friendname"><%= friend[:name] %></div>
+              <div id="friendloc"> <%= friend[:geo].city %></div>
+            </div>
+          <% end %>
+        </div>
+       </div>
+        <div style="clear:both;"></div>
     <% end %>
   <% end %>
 <% end %>
+ 	</div>
+</div>
+</li>
+
+</div>
+</div>

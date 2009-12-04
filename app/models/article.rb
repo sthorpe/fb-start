@@ -27,7 +27,7 @@ class Article
        if friend_location[:geo] && self.location
         begin
           if friend_location[:geo].distance_from(self.location, :units=>:miles).round <= 200
-            article_friends << {:name => friend_location[:name], :uid => friend_location[:uid]}
+            article_friends << {:name => friend_location[:name], :uid => friend_location[:uid], :geo => friend_location[:geo]}
             puts "This user is good! #{friend_location[:name]}"
           else
             puts "BAD USR!!!!"

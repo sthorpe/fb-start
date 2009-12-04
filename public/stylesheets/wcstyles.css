@@ -81,8 +81,9 @@ li
 .friend #friendname 
 {
    text-align: left;
-       font-size: 10px;
-	   font-weight:bold;
+   font-size: 10px;
+	 font-weight:bold;
+	 padding-top: 10px;
 }
 .friend #friendloc
 {
