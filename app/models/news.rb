@@ -6,8 +6,8 @@ class News
   SimpleRSS.item_tags << :"geo:lat"
   SimpleRSS.item_tags << :"geo:long"
   
-  def initialize
-    rss = SimpleRSS.parse open('http://ws.geonames.org/rssToGeoRSS?feedUrl=http://rss.cnn.com/rss/cnn_topstories.rss')
+  def initialize(feed)
+    rss = SimpleRSS.parse open("http://ws.geonames.org/rssToGeoRSS?feedUrl=#{feed.url}")
     self.articles = []
     if rss 
       rss.items.size.times do |num|

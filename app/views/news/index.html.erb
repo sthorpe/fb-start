@@ -1,12 +1,16 @@
 <br/>
-<% @all_news.articles.each do |news| %>
-  <% if news.friends(facebook_session, @friend_locations) != [] %>
-    <strong><%= link_to(news.title, news.link) %></strong><br/>
-    <br/> In the area:
-    <% news.friends(facebook_session, @friend_locations).each do |friend| %>
-      <fb:profile-pic uid="<%= friend[:uid] %>" facebook-logo="true" linked="true" size="thumb"></fb:profile-pic><br/>
-      <%= friend[:name] %>
+<% @all_news.each do |news| %>
+  <% news.articles.each do |article| %>
+    <% article_friends = article.friends(facebook_session, @friend_locations) %>
+    <% if article_friends != [] %>
+      <strong><%= link_to(article.title, article.link) %></strong><br/>
+      <%= article.description %><br/>
+      <br/> In the area:<br/>
+      <% article_friends.each do |friend| %>
+        <fb:profile-pic uid="<%= friend[:uid] %>" facebook-logo="false" linked="true" size="thumb"></fb:profile-pic><br/>
+        <%= friend[:name] %><br/>
+      <% end %>
+      <br/>
     <% end %>
-    <br/>
   <% end %>
 <% end %>

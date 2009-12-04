@@ -7,8 +7,8 @@ class CreateFeeds < ActiveRecord::Migration
       t.string :description
       t.timestamps
     end
-    # directory = File.join(File.dirname(__FILE__), "data" )
-    # Fixtures.create_fixtures(directory, "feeds" )
+    directory = File.join(File.dirname(__FILE__), "data" )
+    Fixtures.create_fixtures(directory, "feeds" )
   end
 
   def self.down

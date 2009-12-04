@@ -1,0 +1,113 @@
+feed_one:
+  id: 1
+  url: http://rss.cnn.com/rss/cnn_topstories.rss
+  location:
+  description:
+
+feed_two:
+  id: 2
+  url: http://rss.cnn.com/rss/cnn_world.rss
+  location:
+  description:
+
+feed_three:
+  id: 3
+  url: http://rss.cnn.com/rss/cnn_us.rss
+  location:
+  description:
+
+feed_four:
+  id: 4
+  url: http://rss.cnn.com/rss/cnn_world.rss
+  location:
+  description:
+
+feed_five:
+  id: 5
+  url: http://rss.cnn.com/rss/cnn_allpolitics.rss
+  location:
+  description:
+
+feed_six:
+  id: 6
+  url: http://rss.cnn.com/rss/cnn_crime.rss
+  location:
+  description:
+
+feed_seven:
+  id: 7
+  url: http://rss.cnn.com/rss/cnn_tech.rss
+  location:
+  description:
+
+feed_eight:
+  id: 8
+  url: http://rss.cnn.com/rss/cnn_health.rss
+  location:
+  description:
+
+feed_nine:
+  id: 9
+  url: http://rss.cnn.com/rss/cnn_travel.rss
+  location:
+  description:
+
+feed_ten:
+  id: 10
+  url: http://rss.cnn.com/rss/cnn_mostpopular.rss
+  location:
+  description:
+
+feed_eleven:
+  id: 11
+  url: http://newsrss.bbc.co.uk/rss/newsonline_world_edition/asia-pacific/rss.xml
+  location:
+  description:
+
+feed_twelve:
+  id: 12
+  url: http://newsrss.bbc.co.uk/rss/newsonline_world_edition/europe/rss.xml
+  location:
+  description:
+
+feed_thirteen:
+  id: 13
+  url: http://newsrss.bbc.co.uk/rss/newsonline_world_edition/middle_east/rss.xml
+  location:
+  description:
+
+feed_fourteen:
+  id: 14
+  url: http://newsrss.bbc.co.uk/rss/newsonline_world_edition/south_asia/rss.xml
+  location:
+  description:
+
+feed_fiveteen:
+  id: 15
+  url: http://newsrss.bbc.co.uk/rss/newsonline_world_edition/uk_news/rss.xml
+  location:
+  description:
+
+feed_sixteen:
+  id: 16
+  url: http://newsrss.bbc.co.uk/rss/newsonline_world_edition/business/rss.xml
+  location:
+  description:
+
+feed_seventeen:
+  id: 17
+  url: http://newsrss.bbc.co.uk/rss/newsonline_world_edition/health/rss.xml
+  location:
+  description:
+
+feed_eightteen:
+  id: 18
+  url: http://newsrss.bbc.co.uk/rss/newsonline_world_edition/science/nature/rss.xml
+  location:
+  description:
+
+feed_nineteen:
+  id: 19
+  url: http://newsrss.bbc.co.uk/rss/newsonline_world_edition/technology/rss.xml
+  location:
+  description:
