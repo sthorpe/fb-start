@@ -19,7 +19,7 @@ role :app, ip_address
 role :web, ip_address
 role :db,  ip_address, :primary => true
 
-ssh_options[:port] = 2288
+ssh_options[:port] = 22
 ssh_options[:keys] = "./config/deploy.key"
 
 
