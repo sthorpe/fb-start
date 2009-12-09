@@ -6,14 +6,6 @@ describe NewsController do
     @mock_news ||= mock_model(News, stubs)
   end
 
-  describe "GET index" do
-    it "assigns all news as @news" do
-      News.stub!(:find).with(:all).and_return([mock_news])
-      get :index
-      assigns[:news].should == [mock_news]
-    end
-  end
-
   describe "GET show" do
     it "assigns the requested news as @news" do
       News.stub!(:find).with("37").and_return(mock_news)
