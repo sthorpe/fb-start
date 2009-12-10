@@ -9,18 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091210211835) do
-
-  create_table "articles", :force => true do |t|
-    t.string   "title"
-    t.string   "description"
-    t.string   "link"
-    t.string   "geo_lat"
-    t.string   "geo_long"
-    t.integer  "news_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20091203005652) do
 
   create_table "facebook_templates", :force => true do |t|
     t.string   "bundle_id"
@@ -41,14 +30,6 @@ ActiveRecord::Schema.define(:version => 20091210211835) do
   create_table "feeds", :force => true do |t|
     t.string   "url"
     t.integer  "news_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "news", :force => true do |t|
-    t.string   "source"
-    t.string   "description"
-    t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
