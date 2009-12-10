@@ -1,6 +1,5 @@
 require 'simple-rss'
 require 'open-uri'
-
 class News
   attr_accessor :articles
   SimpleRSS.item_tags << :"geo:lat"
@@ -40,4 +39,5 @@ class News
     
     return @uq_art
   end
+    
 end

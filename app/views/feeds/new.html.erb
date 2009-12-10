@@ -1,15 +1,11 @@
 <h1>New feeds</h1>
 
-<% form_for(@feeds) do |f| %>
+<% form_for(@feed) do |f| %>
   <%= f.error_messages %>
 
   <p>
     <%= f.label :url %><br />
     <%= f.text_field :url %>
-  </p>
-  <p>
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
   </p>
   <p>
     <%= f.submit 'Create' %>

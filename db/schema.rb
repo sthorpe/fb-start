@@ -9,10 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091203005652) do
+ActiveRecord::Schema.define(:version => 20091210211835) do
 
-  create_table "categories", :force => true do |t|
-    t.string   "name"
+  create_table "articles", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "link"
+    t.string   "geo_lat"
+    t.string   "geo_long"
+    t.integer  "news_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,26 +40,17 @@ ActiveRecord::Schema.define(:version => 20091203005652) do
 
   create_table "feeds", :force => true do |t|
     t.string   "url"
-    t.string   "location"
-    t.string   "description"
+    t.integer  "news_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "news", :force => true do |t|
-    t.string   "title"
+    t.string   "source"
     t.string   "description"
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "streams", :force => true do |t|
-    t.string   "name"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "categories_id"
   end
 
   create_table "users", :force => true do |t|

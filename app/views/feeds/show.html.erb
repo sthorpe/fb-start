@@ -1,13 +1,8 @@
 <p>
   <b>Url:</b>
-  <%=h @feeds.url %>
-</p>
-
-<p>
-  <b>Location:</b>
-  <%=h @feeds.location %>
+  <%=h @feed.url %>
 </p>
 
 
-<%= link_to 'Edit', edit_feeds_path(@feeds) %> |
+<%= link_to 'Edit', edit_feed_path(@feed) %> |
 <%= link_to 'Back', feeds_path %>

@@ -1,6 +1,6 @@
 <h1>Editing feeds</h1>
 
-<% form_for(@feeds) do |f| %>
+<% form_for(@feed) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -8,13 +8,9 @@
     <%= f.text_field :url %>
   </p>
   <p>
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </p>
-  <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @feeds %> |
-<%= link_to 'Back', feeds_path %>
+<%= link_to 'Show', @feed %> |
+<%= link_to 'Back', feed_path %>

@@ -3,15 +3,13 @@
 <table>
   <tr>
     <th>Url</th>
-    <th>Location</th>
   </tr>
 
 <% @feeds.each do |feeds| %>
   <tr>
     <td><%=h feeds.url %></td>
-    <td><%=h feeds.location %></td>
     <td><%= link_to 'Show', feeds %></td>
-    <td><%= link_to 'Edit', edit_feeds_path(feeds) %></td>
+    <td><%= link_to 'Edit', edit_feed_path(feeds) %></td>
     <td><%= link_to 'Destroy', feeds, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -19,4 +17,4 @@
 
 <br />
 
-<%= link_to 'New feeds', new_feeds_path %>
+<%= link_to 'New feeds', new_feed_path %>

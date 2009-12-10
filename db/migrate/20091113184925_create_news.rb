@@ -1,7 +1,7 @@
 class CreateNews < ActiveRecord::Migration
   def self.up
     create_table :news do |t|
-      t.string :title
+      t.string :source
       t.string :description
       t.string :location
       t.timestamps
