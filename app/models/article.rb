@@ -1,3 +1,4 @@
+require 'sanitize'
 class Article
   @@attr_names = ["title", "description", "link", "geo_lat", "geo_long"]
   attr_accessor *@@attr_names
@@ -12,6 +13,15 @@ class Article
         end
       end
     end
+  end
+  
+  def sanitized_description
+    return Sanitize.clean(strip_html(self.description))
+  end
+  
+  def strip_html(description) # Automatically strips any tags from any string
+    desc = description.gsub(/<\/?[^>]*>/,  "")
+    return desc
   end
   
   def location
@@ -29,8 +39,6 @@ class Article
           if friend_location[:geo].distance_from(self.location, :units=>:miles).round <= 200
             article_friends << {:name => friend_location[:name], :uid => friend_location[:uid], :geo => friend_location[:geo]}
             puts "This user is good! #{friend_location[:name]}"
-          else
-            puts "BAD USR!!!!"
           end
         rescue Exception => e 
           puts "Error with Geocoding: #{e} with city: #{location['city']}, state: #{location['state']}, country: #{location['country']}"

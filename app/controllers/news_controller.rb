@@ -2,11 +2,7 @@ class NewsController < ApplicationController
   before_filter :login_required, :only => [ :index ]
 
   def index
-    @feeds = Feeds.all
-    @all_news = []
-    @feeds.each do |feed|
-      @all_news << News.new(feed)
-    end
+    @all_news = News.all_news
     @friend_locations = User.facebook_friends_locations(facebook_session, current_user)
 
     respond_to do |format|

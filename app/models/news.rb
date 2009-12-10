@@ -17,4 +17,27 @@ class News
     end
   end
   
+  def self.all_news
+    @feeds = Feeds.all
+    @all_news = []
+    @feeds.each do |feed|
+      @all_news << News.new(feed)
+    end
+    return @all_news
+  end
+  
+  def article_titles
+    articles.collect {|x| x.title}
+  end
+    
+  def uniq_articles
+    @uq_art = {}
+    # Grab all article titles
+    # Iterate through each title starting from the first to get a score.
+    article_titles.size.times do |i|
+      article_titles[i].source(article_titles[i+1])
+    end
+    
+    return @uq_art
+  end
 end
