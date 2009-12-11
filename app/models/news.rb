@@ -17,7 +17,7 @@ class News
   end
   
   def self.all_news
-    @feeds = Feeds.all
+    @feeds = Feed.all
     @all_news = []
     @feeds.each do |feed|
       @all_news << News.new(feed)
