@@ -7,26 +7,25 @@
     <% article_friends = article.friends(facebook_session, @friend_locations) %>
     <% if article_friends != [] %>
       <div class="newsitem <%= cycle('clearfix', '') %>">
-      <div class="headline"><p><%= link_to(article.title, article.link)  %></p></div>
-      <div class="summary"><%= article.sanitized_description %></div>
-      <div class="source">from CNN</div>
-        <div class="summary"></div>
-        <div class="affected">Who cares about it:</div>
-        <div class="friendtable">
-          <% article_friends.each do |friend| %>
-            <div class="friend">
-              <div id="friendpic"><fb:profile-pic uid="<%= friend[:uid] %>" facebook-logo="false" linked="true" size="thumb"></fb:profile-pic></div>
-              <div id="friendname"><%= friend[:name] %></div>
-              <div id="friendloc"> <%= friend[:geo].city %></div>
-            </div>
-          <% end %>
+      	<div class="headline"><p><%= link_to(article.title, article.link)  %></p></div>
+      	<div class="summary"><%= article.sanitized_description %></div>
+      	<div class="source">from CNN</div>
+      	<div class="summary"></div>
+      	<div class="affected">Who cares about it:</div>
+      	<div class="friendtable">
+      		<% article_friends.each do |friend| %>
+      		<div class="friend">
+        	  <div id="friendpic"><fb:profile-pic uid="<%= friend[:uid] %>" facebook-logo="false" linked="true" size="thumb"></fb:profile-pic></div>
+        	  <div id="friendname"><%= friend[:name] %></div>
+        	  <div id="friendloc"> <%= friend[:geo].city %></div>
+			</div>
+          	<% end %>
         </div>
-       </div>
-        <div style="clear:both;"></div>
+	  </div>
+      <div style="clear:both;"></div>
     <% end %>
-  <% end %>
- 	</div>
-</div>
+<% end %>
+<% end %>
 </li>
 </div>
 </div>
