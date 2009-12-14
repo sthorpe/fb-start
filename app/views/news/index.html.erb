@@ -1,11 +1,11 @@
 <div class="canvas">
-<% cache "friendtable" do %>
 <div class="friendtable">
 <ol>
 <li>
+<% cache do %>
 <% News.all_news.each do |news| %>
   <% news.articles.each do |article| %>
-    <% article_friends = article.friends(facebook_session, @friend_locations) %>
+    <% article_friends = article.friends(facebook_session, User.facebook_friends_locations(fb_session, user)) %>
     <% if article_friends != [] %>
       <div class="newsitem <%= cycle('clearfix', '') %>">
       	<div class="headline"><p><%= link_to(article.title, article.link)  %></p></div>
@@ -27,7 +27,7 @@
     <% end %>
   <% end %>
 <% end %>
+<% end %>
 </li>
 </div>
-<% end %>
 </div>
