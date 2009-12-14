@@ -3,7 +3,7 @@
 <div class="friendtable">
 <ol>
 <li>
-<% for news in News.all_news %>
+<% News.all_news.each do |news| %>
   <% news.articles.each do |article| %>
     <% article_friends = article.friends(facebook_session, @friend_locations) %>
     <% if article_friends != [] %>
