@@ -2,6 +2,7 @@
 <div class="friendtable">
 <ol>
 <li>
+<% cache do %>
 <% @all_news.each do |news| %>
   <% news.articles.each do |article| %>
     <% article_friends = article.friends(facebook_session, @friend_locations) %>
@@ -13,17 +14,18 @@
       	<div class="summary"></div>
       	<div class="affected">Who cares about it:</div>
       	<div class="friendtable">
-      		<% article_friends.each do |friend| %>
-      		<div class="friend">
-        	  <div id="friendpic"><fb:profile-pic uid="<%= friend[:uid] %>" facebook-logo="false" linked="true" size="thumb"></fb:profile-pic></div>
+      	  <% article_friends.each do |friend| %>
+      	  	<div class="friend">
+          	  <div id="friendpic"><fb:profile-pic uid="<%= friend[:uid] %>" facebook-logo="false" linked="true" size="thumb"></fb:profile-pic></div>
         	  <div id="friendname"><%= friend[:name] %></div>
         	  <div id="friendloc"> <%= friend[:geo].city %></div>
-			</div>
-          	<% end %>
+		    </div>
+          <% end %>
         </div>
 	  </div>
       <div style="clear:both;"></div>
     <% end %>
+  <% end %>
 <% end %>
 <% end %>
 </li>
