@@ -1,8 +1,8 @@
 <div class="canvas">
+<% cache "friendtable" do %>
 <div class="friendtable">
 <ol>
 <li>
-<% cache do %>
 <% @all_news.each do |news| %>
   <% news.articles.each do |article| %>
     <% article_friends = article.friends(facebook_session, @friend_locations) %>
@@ -27,7 +27,7 @@
     <% end %>
   <% end %>
 <% end %>
-<% end %>
 </li>
 </div>
+<% end %>
 </div>
